@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coffee Spots</title>
+
+<body>
+	<h1>Find Your Lovely Coffee Spot</h1>
+	<h2>Some Tips</h2>
+	<form action="">
+		<ul>
+			<li>Your favourite coffee spot is in:<br/>
+				<input id="name" name="username" type"text"><br/>
+				<input id="name" type="password" placeholder="password"><br/>
+				<textarea id="ta" name="essay" cols="30" rows="10"></textarea>
+			</li>
+
+			<li>Checkbox<br/>
+				<input name="favCoffee" id="favCoffee1" value="filter coffee" type="checkbox"><label for="favCoffee">filter coffee </label><br/>
+				<input name="favCoffee" id="favCoffee2" value="Turkish coffee" type="checkbox"><label for="favCoffee">Turkish coffee </label><br/>
+				<input name="favCoffee" id="favCoffee3" value="Pumpkin spice latte" type="checkbox"><label for="favCoffee">Pumpkin spice latte </label>
+			</li>
+
+			<li>Radio Buttons<br/>
+				<input name="favSnack" id="favSnack1" value="Carrot" type="radio"><label for="favSnack1">Carrot</label><br/>
+				<input name="favSnack" id="favSnack2" value="Popcorn" type="radio"><label for="favSnack1">Popcorn</label><br/>
+				<input name="favSnack" id="favSnack3" value="Croissant" type="radio"><label for="favSnack1">Croissant</label>
+			</li>
+
+			<li>Number Stepper<br/>
+				<input name="count" id="myCount" value="15" type="number" min="12" max="28"><br/>
+			</li>
+
+			<li>Select Boxes<br/>
+				<select name="state" id="myState">
+					<option value="NJ">New Jersey</option>
+					<option value="NJ">Jersey City</option>
+					<option value="NY">Manhatten</option>
+					<option value="TX">Housten</option>
+					<option value="MS">Boston</option>
+				</select>
+			</li>
+			<li>
+				<input type="submit" value="Submit"><br/>
+			</li>
+		</ul>
+		<h2>Others may vary</h2>
+		<ul>
+			<li>Image <input type=image src="https://t3.ftcdn.net/jpg/00/38/70/70/240_F_38707038_tackXzogLTsiyh9y9oAADjCXzhXv3Zgn.jpg"></li>
+			<li>Range <input type="range"></li>
+			<li>Date <input type="date"></li>
+			<li>Month <input type="month"></li>
+			<li>Week <input type="week"></li>
+			<li>Color w/ Value<input type="color" value="#8A0C7A"></li>
+			<li>Progress bar<progress max="100" value="23"></progress></li>
+			<li>Meter <meter value="63" min="1" max="99" low="33" high="87" optimum="52"></meter></li>
+			<li><a href="">More here</a></li>
+		</ul>
+
+		<h2>Common Attributes</h2>
+		<ul>
+			<li> Disabled<br/>
+				<input disabled id="name" type="text"><br/>
+				<input disabled id="favCoffee2" value="Turkish coffee" type="checkbox"><label for="favCoffee2">Turkish coffee</label><br/>
+			</li>
+
+			<li>Required<br/>
+				<input required id="name" type="text"><br/>
+				<input required id="favCoffee2" value="Turkish coffee" type="checkbox"><label for="favCoffee2">Turkish coffee</label><br/>
+			</li>
+
+			<li>Checked<br/>
+
+				<input checked id="favCoffee2" value="Turkish coffee" type="checkbox"><label for="favCoffee2">Turkish coffee</label><br/>
+				<input checked name="favSnack" id="favSnack3" type="radio"><label for="favSnack3">Croissant</label><br/>
+			</li>
+			<li>Read Only<Br/>
+				<input readonly id="name" value="You cannot type in this box or do whatever yo want" type="text"><br/>
+			</li>
+		</ul>
+
+
+
+
+<style>
+#div1 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<p>Drag the flower image into the rectangle:</p>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+</body>
+<img src="https://i.pinimg.com/736x/32/11/6e/32116ee83dba274ffdc3354ecfe278c0--rain-drops-dew-drops.jpg" alt="Flower" style="width:104px;height:78px;">
+</form>
+
+</body>
+</html>
